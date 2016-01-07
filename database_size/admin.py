@@ -17,7 +17,7 @@ class SelectDatabaseListFilter(SimpleListFilter):
         self.parameter_val = None
         try:
             self.parameter_val = request.GET.get(self.parameter_name, self.default_value)
-        except Exception, e:
+        except Exception as e:
             pass
         super(SelectDatabaseListFilter, self).__init__(request, params, model, model_admin)
 
